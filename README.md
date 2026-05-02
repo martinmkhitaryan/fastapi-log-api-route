@@ -1,5 +1,9 @@
 # fastapi-log-api-route
 
+[![PyPI version](https://img.shields.io/pypi/v/fastapi-log-api-route)](https://pypi.org/project/fastapi-log-api-route/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A drop-in [`APIRoute`](https://fastapi.tiangolo.com/advanced/custom-request-and-route/)
 subclass for [FastAPI](https://fastapi.tiangolo.com/) that logs each request
 and response with method, path, headers, body, status, duration, and any
