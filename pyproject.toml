@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastapi-log-api-route"
+dynamic = ["version"]
+description = "A FastAPI APIRoute that logs each request and response."
+authors = [
+    { name = "Martin Mkhitaryan", email = "mkhitaryan.martin@2000gmail.com" }
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = [
+    "fastapi",
+    "logging",
+    "apiroute",
+    "api-route",
+    "middleware",
+    "observability",
+    "request-logging",
+    "structured-logging",
+]
+dependencies = [
+    "fastapi>=0.70.0,<1.0.0",
+    "orjson>=3.0,<4.0",
+]
+classifiers = [
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/martinmkhitaryan/fastapi-log-api-route"
+Repository = "https://github.com/martinmkhitaryan/fastapi-log-api-route"
+Documentation = "https://github.com/martinmkhitaryan/fastapi-log-api-route#readme"
+"Bug Tracker" = "https://github.com/martinmkhitaryan/fastapi-log-api-route/issues"
+
+[dependency-groups]
+dev = [
+    "pytest~=8.4.0",
+    "pytest-cov~=7.0",
+    "httpx~=0.27.0",
+    "ruff~=0.13.0",
+    "hatch~=1.16.0",
+]
+
+[tool.hatch.version]
+path = "src/fastapi_log_api_route/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fastapi_log_api_route"]
